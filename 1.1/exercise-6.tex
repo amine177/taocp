@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\begin{document}
+What is $T_5$, the average number of times step E1 is performed when n = 5?
+\\\\
+$T_n$ = \{ Average number of times step E1 is 
+performed for a fixed n and variable m \}
+\\
+The problem is dependent of the equivalence classes (remainders) of
+the division of numbers by $n$, therefore  we should find the average
+repetition for m $\in S$, for $S \in \mathbb{Z}/n\mathbb{Z}$\\
+
+
+\noindent if m mod 5 = 0 $\Rightarrow$ E1 executes 1 time\\
+if m mod 5 = 1 $\Rightarrow$ E1 executes 2 time\\
+if m mod 5 = 2 $\Rightarrow$ E1 executes 3 times\\
+if m mod 5 = 3 $\Rightarrow$ E1 executes 4 times\\
+if m mod 5 = 4 $\Rightarrow$ E1 executes 3 times\\
+The average is : $\frac{13}{5}$
+\end{document}
