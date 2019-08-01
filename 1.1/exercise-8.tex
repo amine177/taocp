@@ -1,10 +1,13 @@
 \documentclass{article}
 \begin{document}
 \noindent A simple \textbf{induction}:\\
-$f(a^mb^n)$ = $f(a^{min(n, m)}b^{|m - n|})$\\
+$f(a^mb^n)$ = $a^{min(n, m)}b^{|m - n|}c^{min(n, m)}$\\
+$f(a^xb^yc^k)$ = $b^{x+y}a^k$\\
+$f(a^k)$ = $a^k$\\
 A simple \textbf{series}:\\
 $U_0  = m, V_0 = n$\\
-$U_n = |U_{n-1} - V_{n-1}|, V_n = min(U_{n-1}, V_{n-1})$\\\\
+$U_n = |U_{n-1} - V_{n-1}|, V_n = min(U_{n-1}, V_{n-1})$\\
+$ \forall n \geq gcd(m, n), U_n = 0$\\\\
 The \textbf{algorithm}:\\
 \textbf{Input}: $a^mb^n$\\
 1- Remove an 'a' an a 'b', otherwise (no a, no b or both) goto 3\\
