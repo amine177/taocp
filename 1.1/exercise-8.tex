@@ -10,17 +10,17 @@ $U_n = |U_{n-1} - V_{n-1}|, V_n = min(U_{n-1}, V_{n-1})$\\
 $ \forall n \geq gcd(m, n), U_n = 0$\\\\
 The \textbf{algorithm}:\\
 \textbf{Input}: $a^mb^n$\\
-1- Remove an 'a' an a 'b', otherwise (no a, no b or both) goto 3\\
-2- Add 'c', goto 1\\
-3- Switch all 'a' to 'b'\\
-4- Switch all 'c' to 'a'\\
-5- If there is 'b', goto 1, otherwise halt\\
+1- Remove an `a' an a `b', otherwise (no a, no b or both) goto 3\\
+2- Add `c', goto 1\\
+3- Switch all `a' to `b'\\
+4- Switch all `c' to `a'\\
+5- If there is `b', goto 1, otherwise halt\\
 \textbf{Output}: $a^x = a^{gcd(m, n)}$\\
 
 \textbf{An explanation}:\\
 The main idea is to continuously substruct n from m to get
-a 'remainder' $|m - n|$ 'b' and  'quotient'  min(n, m)  'a'
-until we get no more 'b' (remainder is 0) at step 4, therfore
+a `remainder' $|m - n|$ `b' and  `quotient'  min(n, m)  `a'
+until we get no more `b' (remainder is 0) at step 4, therfore
 $a^x = a^{gcd(n, m)}$\\
 
 
