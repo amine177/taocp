@@ -1,0 +1,58 @@
+\documentclass{article}
+\begin{document}
+\noindent A simple \textbf{induction}:\\
+$f(a^mb^n)$ = $f(a^{min(n, m)}b^{|m - n|})$
+A simple \textbf{series}:\\
+$U_0  = m, V_0 = m$\\
+$U_n = |U_{n-1} - V_{n-1}|, V_n = min(U_{n-1}, V_{n-1})$\\\\
+The \textbf{algorithm}:\\
+\textbf{Input}: $a^mb^n$\\
+1- Remove an 'a' an a 'b', otherwise (no a, no b or both) goto 3\\
+2- Add 'c', goto 1\\
+3- Switch all 'a' to 'b'\\
+4- Switch all 'c' to 'a'\\
+5- If there is 'b', goto 1, otherwise halt\\
+\textbf{Output}: $a^x = a^{gcd(m, n)}$\\
+
+\textbf{An explanation}:\\
+The main idea is to continuously substruct n from m to get $|m - n|$ 'b'
+ and  min(n, m) 'a'  until we get no more 'b' at step 4\\
+
+
+ \noindent A sample running:\\
+aaaaaabbbbbbbbbb\\
+aaaaabbbbbbbbb\\
+aaaaabbbbbbbbbc\\
+aaaabbbbbbbbc\\
+aaaabbbbbbbbcc\\
+aaabbbbbbbcc\\
+aaabbbbbbbccc\\
+aabbbbbbccc\\
+aabbbbbbcccc\\
+abbbbbcccc\\
+abbbbbccccc\\
+bbbbccccc\\
+bbbbcccccc\\
+bbbbaaaaaa\\
+bbbaaaaa\\
+bbbaaaaac\\
+bbaaaac\\
+bbaaaacc\\
+baaacc\\
+baaaccc\\
+aaccc\\
+aacccc\\
+bbcccc\\
+bbaaaa\\
+baaa\\
+baaac\\
+aac\\
+aacc\\
+bbaa\\
+ba\\
+bac\\
+cc\\
+aa\\
+HALT\\
+GCD(14, 6) = 2
+\end{document}
